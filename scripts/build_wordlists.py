@@ -4,7 +4,7 @@
    The source is the Hunspell dictionary es_ES of the RLA-ES project, from the LibreOffice repository.
    The script expands each dictionary entry with its affixes: plurals, feminine forms and verb forms.
 2. wordle_arena/data/common_es.txt: the 1000 most frequent lemmas of the first list. These words are the
-   hidden words. This list applies the golden rule (see the README and wordle_arena/prompt.py):
+   hidden words. This list applies the golden rule (see docs/metodologia.md and wordle_arena/prompt.py):
    a lemma is a word that has at least one meaning of its own in the Spanish Wiktionary, not only
    "form of" another word. For example PERRO, CERCA and ENERO are lemmas; PERROS, PUEDE and CASES are not.
    The source of the meanings is the Spanish Wiktionary, as extracted by kaikki.org (wiktextract).

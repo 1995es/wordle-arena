@@ -12,7 +12,7 @@ GOLDEN_RULE = (
     "The guesses can be any word of the dictionary, also plurals, feminine forms and conjugated verbs. "
     "Names are not valid words."
 )
-"""The definition of the hidden word. The README quotes this text, and common_es.txt applies it."""
+"""The definition of the hidden word. docs/metodologia.md quotes this text, and common_es.txt applies it."""
 
 COLORS = (
     "Every letter of a guess is colored: green means the hidden word has that letter in that same position; "

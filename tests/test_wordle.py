@@ -42,11 +42,11 @@ def test_common_words_are_lemmas_in_the_word_list():
     assert not {"GATOS", "CASES", "PUEDE", "ESTOY", "MESES"} & set(common)  # Only forms of other words.
 
 
-def test_prompt_and_readme_use_the_golden_rule():
+def test_prompt_and_docs_use_the_golden_rule():
     assert game_state([])["hidden_word_rule"] == GOLDEN_RULE
     assert "hidden_word_rule" in QUESTION["the hidden word"]
-    readme = Path(__file__).parents[1] / "README.md"
-    assert GOLDEN_RULE in readme.read_text(encoding="utf-8")
+    methodology = Path(__file__).parents[1] / "docs" / "metodologia.md"
+    assert GOLDEN_RULE in methodology.read_text(encoding="utf-8")
 
 
 def test_candidates_give_the_same_feedback_as_the_secret():

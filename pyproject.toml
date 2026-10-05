@@ -1,0 +1,42 @@
+[project]
+name = "wordle-arena"
+version = "0.1.0"
+description = "Benchmark: TypeSafe Jev vs Claude Opus 5.5 solving Wordle in Spanish."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.14,<4"
+keywords = ["wordle", "benchmark", "llm", "claude", "typesafe", "jev"]
+dependencies = [
+    "anthropic>=1.11",
+    "python-dotenv>=1.2",
+    "tenacity>=9.1",
+    "typesafe-sdk>=0.7.2",
+]
+
+[project.scripts]
+wordle-arena = "wordle_arena.cli:main"
+
+[tool.poetry]
+packages = [{ include = "wordle_arena" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+ruff = "*"
+
+[tool.poetry.group.data.dependencies]
+wordfreq = "^3.1.1"
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
